@@ -1,0 +1,3 @@
+[submodule "comps"]
+	path = comps
+	url = http://git.fedorahosted.org/git/comps.git
