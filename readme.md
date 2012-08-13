@@ -12,6 +12,9 @@ Instructions
 
 Not really, here are some example commands you'll want to use:
 
-    git submodule init / git submodule update
-
+    git submodule init
+    git submodule update
+    sudo cp fedora-17-arm-rpi.cfg /etc/mock/ #or symlink for auto-updates
+    yum group install "Development Tools" "Fedora Packager"  
     ./yum-packagelist.py base core
+
