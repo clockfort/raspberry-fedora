@@ -16,5 +16,6 @@ Not really, here are some example commands you'll want to use:
     git submodule update
     sudo cp fedora-17-arm-rpi.cfg /etc/mock/ #or symlink for auto-updates
     yum group install "Development Tools" "Fedora Packager"  
-    ./yum-packagelist.py base core
-
+    ./yum-group-sources.py base core
+    mock init
+    mock --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi SRPMs/* --resultdir RPMs/
