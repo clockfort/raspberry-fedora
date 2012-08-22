@@ -19,3 +19,4 @@ Not really, here are some example commands you'll want to use:
     ./yum-group-sources.py base core
     mock init
     mock --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi SRPMs/* --resultdir RPMs/
+    find SRPMs/ -name "*.src.rpm" -type f -exec mock --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi {} --resultdir RPMs/ \;
