@@ -15,9 +15,8 @@ Not really, here are some example commands you'll want to use:
     git submodule init
     git submodule update
     sudo cp fedora-17-arm-rpi.cfg /etc/mock/ #or symlink for auto-updates
-    sudo cp crossbuild-mock-plugin/cross.py /usr/lib/python2.7/site-packages/mockbuild/plugins/
-    yum group install "Development Tools" "Fedora Packager"
+    yum group install "Development Tools" "Fedora Packager"  
     ./yum-group-sources.py base core
     mock init
-    mock --enable-plugin=cross --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi SRPMs/* --resultdir RPMs/
-    find SRPMs/ -name "*.src.rpm" -type f -exec mock --enable-plugin=cross --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi {} --resultdir RPMs/ \;
+    mock --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi SRPMs/* --resultdir RPMs/
+    find SRPMs/ -name "*.src.rpm" -type f -exec mock --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi {} --resultdir RPMs/ \;

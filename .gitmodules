@@ -1,6 +1,3 @@
 [submodule "comps"]
 	path = comps
 	url = http://git.fedorahosted.org/git/comps.git
-[submodule "crossbuild-mock-plugin"]
-	path = crossbuild-mock-plugin
-	url = git://github.com/clockfort/crossbuild-mock-plugin.git
