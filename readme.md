@@ -17,6 +17,6 @@ Not really, here are some example commands you'll want to use:
     sudo cp fedora-17-arm-rpi.cfg /etc/mock/ #or symlink for auto-updates
     yum group install "Development Tools" "Fedora Packager"  
     ./yum-group-sources.py base core
-    mock init
+    mock -r fedora-17-arm-rpi.cfg init
     mock --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi SRPMs/* --resultdir RPMs/
-    find SRPMs/ -name "*.src.rpm" -type f -exec mock --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi {} --resultdir RPMs/ \;
+    find SRPMs/ -name "*.src.rpm" -type f -exec mock --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi {} --resultdir RPMs/ \; -exec mv {} SRPMs/finished/ \;
