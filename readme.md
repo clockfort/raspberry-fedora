@@ -19,4 +19,4 @@ Not really, here are some example commands you'll want to use:
     ./yum-group-sources.py base core
     mock -r fedora-17-arm-rpi.cfg init
     mock --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi SRPMs/* --resultdir RPMs/
-    find SRPMs/ -name "*.src.rpm" -type f -exec mock --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi {} --resultdir RPMs/ \; -exec mv {} SRPMs/finished/ \;
+    find SRPMs/ -name "*.src.rpm" -type f -exec mock --no-clean --no-cleanup-after --installdeps --rebuild -r fedora-17-arm-rpi {} --resultdir RPMs/ \; -exec mv {} SRPMs/finished/ \; -exec scp RPMs/*.rpm clockfort.com:/mnt/clockfort/www/repos/raspberry-pi/17/packages/arm/os/ \; -exec mv RPMs/*.rpm RPMs/finished/ \;
